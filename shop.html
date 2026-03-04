@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>חנות מקוונת | בית התבלין והטבע</title>
+  <meta name="description" content="הזמינו תבלינים, קטניות, פירות יבשים ומוצרי טבע ישירות בווטסאפ — בית התבלין והטבע, קריית ביאליק" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700;900&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/shop.css?v=1" />
+</head>
+<body class="shop-page">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="https://res.cloudinary.com/dcenbexvc/image/upload/v1772657567/Logo_gqf5ja.svg" alt="לוגו בית התבלין והטבע" class="nav-logo-img" />
+        <span class="nav-title">בית התבלין והטבע</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">אודות</a></li>
+        <li><a href="index.html#products">מוצרים</a></li>
+        <li><a href="index.html#nature">טבע ורוחניות</a></li>
+        <li><a href="index.html#location">מיקום</a></li>
+        <li><a href="index.html#contact">צור קשר</a></li>
+        <li><a href="shop.html" class="nav-cta">חנות 🛒</a></li>
+      </ul>
+      <div class="nav-right-group">
+        <!-- Cart button -->
+        <div class="cart-btn-outer">
+          <button id="cartToggle" aria-label="פתח סל קניות">
+            <span>🛒</span> סל
+          </button>
+          <span id="cartBadge" aria-live="polite">0</span>
+        </div>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="פתח תפריט">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html#about">אודות</a></li>
+        <li><a href="index.html#products">מוצרים</a></li>
+        <li><a href="index.html#nature">טבע ורוחניות</a></li>
+        <li><a href="index.html#location">מיקום</a></li>
+        <li><a href="index.html#contact">צור קשר</a></li>
+        <li><a href="shop.html">חנות 🛒</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== SHOP HERO ===== -->
+  <section class="shop-hero">
+    <div class="container">
+      <div class="shop-hero-label">🛒 חנות מקוונת</div>
+      <h1>הזמינו <em>ישירות</em> מהחנות</h1>
+      <p>בחרו מוצרים, הוסיפו לסל — ונשלח לכם הזמנה בווטסאפ תוך שניות</p>
+    </div>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-bar-inner">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="חפש מוצר..."
+          autocomplete="off"
+          aria-label="חיפוש מוצר"
+        />
+      </div>
+      <div class="cat-filters" id="categoryFilters" role="group" aria-label="סינון לפי קטגוריה">
+        <!-- Populated by shop.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRODUCTS SECTION ===== -->
+  <section class="shop-section">
+    <div class="container">
+      <div class="shop-section-header">
+        <h2 class="shop-section-title">המוצרים שלנו</h2>
+        <span id="productCount"></span>
+      </div>
+      <div id="productsGrid">
+        <!-- Populated by shop.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CART OVERLAY ===== -->
+  <div id="cartOverlay" class="shop-overlay" aria-hidden="true"></div>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <aside id="cartSidebar" role="dialog" aria-modal="true" aria-label="סל קניות">
+    <div class="cart-header">
+      <h2>🛒 הסל שלי</h2>
+      <button id="cartClose" aria-label="סגור סל">✕</button>
+    </div>
+    <div id="cartBody">
+      <!-- Populated by shop.js -->
+    </div>
+    <div id="cartFooter">
+      <!-- Populated by shop.js -->
+    </div>
+  </aside>
+
+  <!-- ===== CHECKOUT OVERLAY ===== -->
+  <div id="checkoutOverlay" class="shop-overlay" style="z-index:500" aria-hidden="true"></div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div id="checkoutModal" role="dialog" aria-modal="true" aria-label="פרטי הזמנה">
+    <div class="modal-header">
+      <h2>📋 פרטי הזמנה</h2>
+      <button id="checkoutClose" aria-label="סגור">✕</button>
+    </div>
+    <div class="modal-body">
+      <!-- Order summary -->
+      <div class="order-summary" id="orderSummary">
+        <!-- Populated by shop.js -->
+      </div>
+      <!-- Customer form -->
+      <form id="checkoutForm" novalidate>
+        <div class="checkout-form-group">
+          <label for="fieldName">שם מלא <span aria-hidden="true">*</span></label>
+          <input type="text" id="fieldName" name="name" required
+            placeholder="ישראל ישראלי" autocomplete="name" />
+        </div>
+        <div class="checkout-form-group">
+          <label for="fieldPhone">טלפון <span aria-hidden="true">*</span></label>
+          <input type="tel" id="fieldPhone" name="phone" required
+            placeholder="050-000-0000" autocomplete="tel" />
+        </div>
+        <div class="checkout-form-group">
+          <label for="fieldAddress">כתובת למשלוח <span style="font-weight:400;opacity:.7">(אופציונלי)</span></label>
+          <input type="text" id="fieldAddress" name="address"
+            placeholder="רחוב, מספר, עיר" autocomplete="street-address" />
+        </div>
+        <div class="checkout-form-group">
+          <label for="fieldNotes">הערות להזמנה <span style="font-weight:400;opacity:.7">(אופציונלי)</span></label>
+          <textarea id="fieldNotes" name="notes"
+            placeholder="כל הערה מיוחדת לגבי המוצרים או המשלוח..."></textarea>
+        </div>
+        <button type="submit" class="checkout-submit">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          שלח הזמנה בווטסאפ
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="https://res.cloudinary.com/dcenbexvc/image/upload/v1772657567/Logo_gqf5ja.svg" alt="לוגו בית התבלין והטבע" class="footer-logo-img" />
+            <span>בית התבלין והטבע</span>
+          </div>
+          <p>חנות תבלינים, קטניות, פירות יבשים ומוצרי טבע. שירות אישי, ייעוץ קולינרי, איכות מוכחת.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/972502456233" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>ניווט מהיר</h4>
+          <ul>
+            <li><a href="index.html#about">אודות</a></li>
+            <li><a href="index.html#products">מוצרים</a></li>
+            <li><a href="index.html#nature">טבע ורוחניות</a></li>
+            <li><a href="index.html#location">מיקום ושעות</a></li>
+            <li><a href="index.html#contact">צור קשר</a></li>
+            <li><a href="shop.html">חנות מקוונת 🛒</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>פרטי התקשרות</h4>
+          <p>📍 מרכז קניות סביניה, השקדים 4, קריית ביאליק</p>
+          <p>📞 פיני: <a href="tel:0502456233">050-245-6233</a></p>
+          <p>📞 תאיר: <a href="tel:0509333951">050-933-3951</a></p>
+          <p>🕐 א'–ב',ד': 8:30–13:30, 16:00–19:00</p>
+          <p>🕐 ה': 8:30–19:00 | ו': 8:30–14:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 בית התבלין והטבע · כל הזכויות שמורות</p>
+        <p class="footer-credit">נבנה ע"י <a href="https://slavx.site" target="_blank" rel="noopener">SLAVX.SITE</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a href="https://wa.me/972502456233" class="wa-float" target="_blank" rel="noopener" aria-label="שלח ווטסאפ">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="wa-pulse"></span>
+    <span class="wa-tooltip">שלח ווטסאפ לפיני</span>
+  </a>
+
+  <script src="js/script.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
