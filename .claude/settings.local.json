@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(npx vercel:*)",
+      "Bash(gh auth:*)",
+      "Bash(where gh:*)",
+      "Bash(\"/c/Users/Netanel Bard/AppData/Local/Programs/GitHub CLI/gh.exe\" auth:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell.exe:*)"
+    ]
+  }
+}
