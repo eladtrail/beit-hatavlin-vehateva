@@ -7,7 +7,9 @@
       "Bash(where gh:*)",
       "Bash(\"/c/Users/Netanel Bard/AppData/Local/Programs/GitHub CLI/gh.exe\" auth:*)",
       "Bash(cmd.exe:*)",
-      "Bash(powershell.exe:*)"
+      "Bash(powershell.exe:*)",
+      "WebFetch(domain:res.cloudinary.com)",
+      "WebFetch(domain:beit-hatavlin-vehateva.vercel.app)"
     ]
   }
 }
