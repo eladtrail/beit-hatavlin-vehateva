@@ -1,0 +1,61 @@
+id,שם,תיאור,מחיר,תמונה,קטגוריה,מלאי,פעיל
+1,כמון טחון במקום,כמון שלם נטחן לפי הזמנה — ריחני טרי ועשיר בטעם,18,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,50,TRUE
+2,פפריקה מעושנת,פפריקה ספרדית מעושנת מושלמת לבישול ולצלייה,22,https://images.unsplash.com/photo-1545634057-c7c5b2efb8f2?w=400&q=80&auto=format&fit=crop,תבלינים,40,TRUE
+3,כורכום טחון,כורכום טהור וטרי — מלא קורקומין וצבע זהב עשיר,20,https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80&auto=format&fit=crop,תבלינים,45,TRUE
+4,הל טחון,הל ירוק טחון — מיוחד לקפה לאפייה ולתבשילים,28,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,30,TRUE
+5,קינמון טחון,קינמון סרילנקי איכותי — מתוק ועדין לאפייה ולשתייה,20,https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&q=80&auto=format&fit=crop,תבלינים,35,TRUE
+6,פלפל שחור טחון,פלפל שחור מלא שנטחן במקום לחריפות ולניחוח מרבי,22,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,40,TRUE
+7,פלפל אדום חריף,פלפל אדום גרוס חריף — לאוהבי הקיק,18,https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?w=400&q=80&auto=format&fit=crop,תבלינים,30,TRUE
+8,זנגביל טחון,ג'ינג'ר טחון טרי — מושלם לתה ולבישול אסייתי,24,https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80&auto=format&fit=crop,תבלינים,35,TRUE
+9,כוסברה טחונה,כוסברה ריחנית טחונה — בסיס למטבח מזרחי ומרוקאי,18,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,40,TRUE
+10,עלי דפנה יבשים,עלי דפנה שלמים — לתבשילים ולמרקים,15,https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=400&q=80&auto=format&fit=crop,תבלינים,50,TRUE
+11,אורגנו יבש,אורגנו ים תיכוני ריחני — לפיצה לסלטים ולצלייה,16,https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=400&q=80&auto=format&fit=crop,תבלינים,45,TRUE
+12,טימין יבש,טימין ארומטי יבש — עשב תבלין קלאסי לבישול צרפתי,16,https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=400&q=80&auto=format&fit=crop,תבלינים,45,TRUE
+13,ראס אל חנות,תערובת 12 תבלינים מרוקאית — לתבשילים עשירים,32,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,25,TRUE
+14,בהרט,תערובת תבלינים ערבית קלאסית — לאורז ולבשר,28,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,25,TRUE
+15,זעתר ירושלמי,זעתר אמיתי מירושלים — לטבילה בשמן ולאפייה,35,https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=400&q=80&auto=format&fit=crop,תבלינים,30,TRUE
+16,שומר טחון,זרעי שומר טחונים — ריח אניס עדין למאפים,18,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,30,TRUE
+17,פלפל לבן טחון,פלפל לבן עדין — למרקים לרטבים ולדגים,22,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,25,TRUE
+18,חרדל טחון,זרעי חרדל צהובים טחונים — לרטבים ולמרינדות,20,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,30,TRUE
+19,פסיפלורה טחונה,פרחי פסיפלורה מיובשים וטחונים — מרגיע ומשכך חרדה,38,https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=400&q=80&auto=format&fit=crop,תבלינים,20,TRUE
+20,כרכום (זעפרן),זעפרן איכותי — מלך התבלינים לאורז ולממרחים,45,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,תבלינים,15,TRUE
+21,קפה שחור טחון,קפה ערבי מהמיטב טחון במקום לטריות מרבית,45,https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80&auto=format&fit=crop,שתייה,20,TRUE
+22,קפה הל,קפה ערבי עם הל — מסורת המזרח בכל לגימה,48,https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80&auto=format&fit=crop,שתייה,20,TRUE
+23,תה נענע מיובש,עלי נענע טריים מיובשים — מרגיע ומרענן אחרי ארוחה,28,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80&auto=format&fit=crop,שתייה,35,TRUE
+24,תה זנגביל ולימון,מיזוג מושלם של זנגביל ולימון — מחזק ומחמם בחורף,35,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop,שתייה,25,TRUE
+25,תה קמומיל,פרחי קמומיל מיובשים — מרגיע לשינה טובה,30,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop,שתייה,30,TRUE
+26,תה ורדים,עלי ורדים מיובשים — ריחני ועשיר בויטמין C,32,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop,שתייה,25,TRUE
+27,מאטה ארגנטינאי,מאטה קוסידו אותנטי — אנרגיה טבעית ללא קפאין חזק,55,https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80&auto=format&fit=crop,שתייה,15,TRUE
+28,חליטת כורכום וג'ינג'ר,מיזוג כורכום זנגביל ופלפל שחור — Golden Milk טבעי,38,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop,שתייה,20,TRUE
+29,תה ירוק יסמין,תה ירוק עם פרחי יסמין — עדין ומרענן,35,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop,שתייה,25,TRUE
+30,חליטת לבנדר,פרחי לבנדר מיובשים — ניחוח מרגיע לפני שינה,32,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop,שתייה,20,TRUE
+31,מארז תבלינים לבשר,5 תבלינים נבחרים לצלייה ובישול בשר — מתנה מושלמת,95,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,מארזים,12,TRUE
+32,מארז תה הרגעה,3 סוגי חליטות מרגיעות קמומיל נענע ולבנדר,85,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop,מארזים,10,TRUE
+33,מארז קפה ותבלינים,קפה ערבי + הל + קינמון — מתנה לאוהבי הקפה,110,https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80&auto=format&fit=crop,מארזים,8,TRUE
+34,מארז מתנה לחג,מבחר 7 תבלינים פרימיום בקופסת מתנה יפהפייה,145,https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80&auto=format&fit=crop,מארזים,6,TRUE
+35,מארז בישול מזרחי,ראס אל חנות + בהרט + זעתר — טריו ים תיכוני,90,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,מארזים,10,TRUE
+36,מארז בריאות וטבע,כורכום + זנגביל + קינמון + פלפל שחור — לחיזוק הגוף,98,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,מארזים,8,TRUE
+37,לפיד מרווה לבנה קטן,לפיד מרווה לבנה 10 ס"מ לטיהור מרחב קטן,35,https://images.unsplash.com/photo-1585388027440-0b7f0deede3a?w=400&q=80&auto=format&fit=crop,טבע,20,TRUE
+38,לפיד מרווה לבנה גדול,לפיד מרווה לבנה 20 ס"מ לטיהור מרחב גדול ולטקסים,55,https://images.unsplash.com/photo-1585388027440-0b7f0deede3a?w=400&q=80&auto=format&fit=crop,טבע,15,TRUE
+39,פאולו סאנטו,עץ קדוש מאמריקה הלטינית לטיהור ואנרגיה חיובית,45,https://images.unsplash.com/photo-1598170845054-99521aa44fc7?w=400&q=80&auto=format&fit=crop,טבע,15,TRUE
+40,קטורת לבונה,שרף לבונה טהורה לניחוח קדוש ולמדיטציה,38,https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=400&q=80&auto=format&fit=crop,טבע,25,TRUE
+41,קטורת מור,שרף מור טבעי — לטיהור ולריפוי אנרגטי,42,https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=400&q=80&auto=format&fit=crop,טבע,20,TRUE
+42,אבן קוורץ ורדרד,אבן קוורץ ורוד לאהבה ורוגע — גודל בינוני,65,https://images.unsplash.com/photo-1559181567-c3190100191d?w=400&q=80&auto=format&fit=crop,טבע,12,TRUE
+43,אמטיסט טבעי,אמטיסט סגול לשחרור לחצים ולשינה טובה,75,https://images.unsplash.com/photo-1559181567-c3190100191d?w=400&q=80&auto=format&fit=crop,טבע,10,TRUE
+44,אבן עין הנמר,אבן עין הנמר חומה — לביטחון ולהצלחה כלכלית,70,https://images.unsplash.com/photo-1554080353-a576cf803bda?w=400&q=80&auto=format&fit=crop,טבע,10,TRUE
+45,שקיק אבני חן מעורבות,שקיק עם 7 אבני חן שונות לשמירה והגנה אישית,75,https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80&auto=format&fit=crop,טבע,12,TRUE
+46,עץ אבנים לשמירה,עץ מיניאטורי מאבני חן — לבית לאנרגיה חיובית,95,https://images.unsplash.com/photo-1554080353-a576cf803bda?w=400&q=80&auto=format&fit=crop,טבע,8,TRUE
+47,עדשים ירוקות,עדשים ירוקות איכותיות עשירות חלבון וסיבים תזונתיים,15,https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80&auto=format&fit=crop,אחר,60,TRUE
+48,עדשים כתומות,עדשים כתומות מפוצלות לבישול מהיר ולמרקים,14,https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80&auto=format&fit=crop,אחר,60,TRUE
+49,חומוס יבש,גרגרי חומוס יבשים איכותיים — לממרח ולתבשילים,16,https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80&auto=format&fit=crop,אחר,50,TRUE
+50,שעועית לבנה,שעועית לבנה גדולה — לתבשילים ולמרקים עשירים,15,https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80&auto=format&fit=crop,אחר,50,TRUE
+51,פול יבש,פול יבש קלוף — לפול מדמס ולתבשילים מסורתיים,14,https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80&auto=format&fit=crop,אחר,50,TRUE
+52,תמרים מג'הול,תמרים מג'הול ענקיים מתוקים ורכים — ישירות מהמקור,55,https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400&q=80&auto=format&fit=crop,אחר,20,TRUE
+53,שקדים טבעיים,שקדים טבעיים ללא קלייה וללא מלח — חטיף בריאותי,42,https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&q=80&auto=format&fit=crop,אחר,30,TRUE
+54,אגוזי מלך,אגוזי מלך טבעיים עשירים באומגה 3 ובנוגדי חמצון,48,https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&q=80&auto=format&fit=crop,אחר,25,TRUE
+55,פיסטוקים טבעיים,פיסטוקים טבעיים ללא מלח — טעימים ובריאים,52,https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&q=80&auto=format&fit=crop,אחר,20,TRUE
+56,פרג טחון במקום,פרג טרי טחון לאפייה ולממרחים — ריחני ואיכותי,30,https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400&q=80&auto=format&fit=crop,אחר,25,TRUE
+57,שומשום לבן,שומשום לבן טרי לטחינה ולאפייה,18,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,אחר,40,TRUE
+58,שומשום שחור,שומשום שחור לגיוון ולקישוט — עשיר בסידן,20,https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80&auto=format&fit=crop,אחר,35,TRUE
+59,קוקוס מגורד,קוקוס מגורד מיובש — לאפייה ולקינוחים טרופיים,22,https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80&auto=format&fit=crop,אחר,30,TRUE
+60,ריבת תאנים ביתית,ריבת תאנים עם תבלינים — מתכון מסורתי ביתי,42,https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80&auto=format&fit=crop,אחר,15,TRUE
