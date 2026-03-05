@@ -332,12 +332,21 @@ function closeCart() {
 }
 
 function bindCartEvents() {
-  const toggle = document.getElementById('cartToggle');
-  const close  = document.getElementById('cartClose');
+  const toggle  = document.getElementById('cartToggle');
+  const close   = document.getElementById('cartClose');
   const overlay = document.getElementById('cartOverlay');
   if (toggle)  toggle.addEventListener('click', openCart);
   if (close)   close.addEventListener('click', closeCart);
   if (overlay) overlay.addEventListener('click', closeCart);
+
+  // Escape key closes cart or checkout
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    const sidebar = document.getElementById('cartSidebar');
+    const modal   = document.getElementById('checkoutModal');
+    if (modal?.classList.contains('modal-open'))   closeCheckout();
+    else if (sidebar?.classList.contains('cart-open')) closeCart();
+  });
 }
 
 function renderCartSidebar() {
@@ -376,7 +385,10 @@ function renderCartSidebar() {
       <span class="cart-total-amount">₪${cartTotal()}</span>
     </div>
     <button class="btn-checkout" id="checkoutBtn">📲 הזמן בווטסאפ</button>
-    <button class="btn-clear-cart" id="clearCartBtn">רוקן סל</button>`;
+    <div class="cart-footer-secondary">
+      <button class="btn-continue-shopping" id="continueShoppingBtn">← המשך קנייה</button>
+      <button class="btn-clear-cart" id="clearCartBtn">🗑 רוקן סל</button>
+    </div>`;
 
   // qty controls
   body.querySelectorAll('.ci-btn').forEach(btn => {
@@ -388,11 +400,13 @@ function renderCartSidebar() {
     });
   });
 
-  const checkoutBtn = document.getElementById('checkoutBtn');
-  const clearBtn    = document.getElementById('clearCartBtn');
+  const checkoutBtn  = document.getElementById('checkoutBtn');
+  const clearBtn     = document.getElementById('clearCartBtn');
+  const continueBtn  = document.getElementById('continueShoppingBtn');
   if (checkoutBtn) checkoutBtn.addEventListener('click', openCheckout);
+  if (continueBtn) continueBtn.addEventListener('click', closeCart);
   if (clearBtn) clearBtn.addEventListener('click', () => {
-    cart = []; saveCart(); updateCartBadge(); renderCartSidebar();
+    cart = []; saveCart(); updateCartBadge(); updateProductButtons(); renderCartSidebar();
   });
 }
 

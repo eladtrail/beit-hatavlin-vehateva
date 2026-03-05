@@ -467,24 +467,27 @@
   color: var(--white);
   flex-shrink: 0;
 }
-.cart-header h2  { font-size: 1.1rem; color: var(--white); }
+.cart-header h2  { font-size: 1.1rem; color: var(--white); flex: 1; text-align: center; }
 
 #cartClose {
   flex-shrink: 0;
-  background: rgba(255,255,255,.15);
-  border: none;
-  color: var(--white);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: background var(--t-fast);
+  gap: 6px;
+  background: rgba(255,255,255,.18);
+  border: 1.5px solid rgba(255,255,255,.28);
+  color: var(--white);
+  padding: 8px 14px;
+  border-radius: var(--r-full);
+  font-size: .88rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 40px;
+  white-space: nowrap;
+  transition: background var(--t-fast), border-color var(--t-fast);
 }
-#cartClose:hover { background: rgba(255,255,255,.28); }
+#cartClose:hover { background: rgba(255,255,255,.3); border-color: rgba(255,255,255,.5); }
 
 /* Scrollable cart body */
 #cartBody {
@@ -585,19 +588,26 @@
   transition: all var(--t-fast);
 }
 .btn-checkout:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(26,107,60,.3); }
+.cart-footer-secondary {
+  display: flex;
+  gap: 8px;
+}
+.btn-continue-shopping,
 .btn-clear-cart {
-  width: 100%;
-  padding: 10px;
+  flex: 1;
+  padding: 10px 8px;
   background: transparent;
   border: 1.5px solid var(--cream-300);
   border-radius: var(--r-full);
-  font-size: .87rem;
+  font-size: .84rem;
   font-family: var(--font-body);
   color: var(--text-muted);
   cursor: pointer;
   transition: all var(--t-fast);
+  white-space: nowrap;
 }
-.btn-clear-cart:hover { border-color: #c0392b; color: #c0392b; }
+.btn-continue-shopping:hover { border-color: var(--brown-400); color: var(--brown-500); background: var(--cream-200); }
+.btn-clear-cart:hover        { border-color: #c0392b; color: #c0392b; }
 
 
 /* ── 11. Checkout Modal ─────────────────────────────────────── */
@@ -651,24 +661,27 @@
   color: var(--white);
   flex-shrink: 0;
 }
-.modal-header h2 { font-size: 1.1rem; color: var(--white); }
+.modal-header h2 { font-size: 1.1rem; color: var(--white); flex: 1; text-align: center; }
 
 #checkoutClose {
   flex-shrink: 0;
-  background: rgba(255,255,255,.15);
-  border: none;
-  color: var(--white);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: background var(--t-fast);
+  gap: 6px;
+  background: rgba(255,255,255,.18);
+  border: 1.5px solid rgba(255,255,255,.28);
+  color: var(--white);
+  padding: 8px 14px;
+  border-radius: var(--r-full);
+  font-size: .88rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 40px;
+  white-space: nowrap;
+  transition: background var(--t-fast), border-color var(--t-fast);
 }
-#checkoutClose:hover { background: rgba(255,255,255,.28); }
+#checkoutClose:hover { background: rgba(255,255,255,.3); border-color: rgba(255,255,255,.5); }
 
 .modal-body {
   flex: 1;
