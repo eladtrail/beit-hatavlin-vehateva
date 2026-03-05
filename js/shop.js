@@ -131,6 +131,17 @@ function splitCSVRow(row) {
 }
 
 /* ─────────────────────────────────────────────────────────────
+   Category icons + gradients
+   ──────────────────────────────────────────────────────────── */
+const CAT_META = {
+  'תבלינים': { icon: '🧂', bg: 'linear-gradient(135deg,#8B4513 0%,#C4852A 100%)' },
+  'שתייה':   { icon: '☕', bg: 'linear-gradient(135deg,#3D2314 0%,#8B4513 100%)' },
+  'מארזים':  { icon: '🎁', bg: 'linear-gradient(135deg,#D4AF37 0%,#A0522D 100%)' },
+  'טבע':     { icon: '🌿', bg: 'linear-gradient(135deg,#1B4332 0%,#2D6A4F 100%)' },
+  'אחר':     { icon: '🫘', bg: 'linear-gradient(135deg,#2C1810 0%,#5C3118 100%)' },
+};
+
+/* ─────────────────────────────────────────────────────────────
    Render — products
    ──────────────────────────────────────────────────────────── */
 function showGridLoading() {
@@ -172,25 +183,23 @@ function renderProducts(products) {
 }
 
 function productCardHTML(p) {
-  const oos = p.stock === 0;
-  const hasImg = p.image && p.image.startsWith('http');
+  const oos  = p.stock === 0;
+  const meta = CAT_META[p.category] || { icon: '✨', bg: 'linear-gradient(135deg,#5C3118,#C4852A)' };
   return `
     <div class="product-card-shop${oos ? ' out-of-stock' : ''}">
-      <div class="pcs-image">
-        ${hasImg
-          ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" onerror="this.style.display='none'">`
-          : `<div class="pcs-image-placeholder">🌿</div>`}
-        ${oos ? '<div class="pcs-badge-oos">אזל המלאי</div>' : ''}
-        ${p.category ? `<div class="pcs-category">${esc(p.category)}</div>` : ''}
+      <div class="pcs-icon-area" style="background:${meta.bg}">
+        <span class="pcs-icon">${meta.icon}</span>
+        ${oos ? '<div class="pcs-badge-oos">אזל</div>' : ''}
       </div>
       <div class="pcs-body">
+        ${p.category ? `<span class="pcs-cat-chip">${esc(p.category)}</span>` : ''}
         <h3 class="pcs-name">${esc(p.name)}</h3>
         ${p.description ? `<p class="pcs-desc">${esc(p.description)}</p>` : ''}
         <div class="pcs-footer">
           <div class="pcs-price">₪${p.price}</div>
           <button class="btn-add-cart" data-id="${esc(p.id)}"
             ${oos ? 'disabled' : ''} aria-label="הוסף ${esc(p.name)} לסל">
-            ${oos ? 'אזל המלאי' : '+ הוסף לסל'}
+            ${oos ? 'אזל' : '+ הוסף'}
           </button>
         </div>
       </div>
