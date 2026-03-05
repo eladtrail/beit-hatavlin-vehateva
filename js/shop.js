@@ -75,18 +75,27 @@ async function loadProducts() {
       const resp = await fetch(SHEET_CSV_URL);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const text = await resp.text();
-      allProducts = parseCSV(text);
+
+      // אם קיבלנו HTML במקום CSV (הפניה של Google) — עבור לדמו
+      if (text.trim().startsWith('<')) throw new Error('Got HTML instead of CSV — sheet not published to web');
+
+      const parsed = parseCSV(text);
+      // אם לא נוחל שום מוצר — עבור לדמו
+      if (!parsed.length) throw new Error('CSV parsed 0 products');
+
+      allProducts = parsed;
     } else {
-      // אין URL — הצג מוצרי דמו
       allProducts = DEMO_PRODUCTS;
     }
   } catch (err) {
-    console.warn('⚠️ לא ניתן לטעון מ-Google Sheets, מציג מוצרי דמו:', err.message);
+    console.warn('⚠️ Google Sheets:', err.message, '— מציג מוצרי דמו');
     allProducts = DEMO_PRODUCTS;
   }
 
   // סנן רק מוצרים פעילים
   allProducts = allProducts.filter(p => p.active);
+  // גיבוי נוסף — אם אחרי סינון נשארנו ריקים, הצג דמו
+  if (!allProducts.length) allProducts = DEMO_PRODUCTS.filter(p => p.active);
   filteredProducts = [...allProducts];
   renderProducts(filteredProducts);
 }
