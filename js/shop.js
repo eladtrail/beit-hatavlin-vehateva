@@ -7,7 +7,7 @@
 // הכנס כאן את ה-URL של Google Sheets שלך:
 // File → Share → Publish to web → בחר את הגיליון → CSV → פרסם → העתק URL
 // דוגמה: https://docs.google.com/spreadsheets/d/e/PUBLISHED_ID/pub?output=csv
-const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1EmCB5CrcGE1mVm-_E4m4O9qqeTzoizGGtoZZOMhAdwk/gviz/tq?tqx=out:csv&gid=1526695506';
+const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSp2Dfb1dkUL8K0_w2BhNAMeVFZMfJB_5C8ncO6WI8bukWRuI4UF4CI0OdN27Sq_kZJiaMGYrCPMtTs/pub?output=csv';
 
 // מספר טלפון ווטסאפ לקבלת הזמנות (פורמט בינלאומי, ללא +)
 const WA_PHONE = '972502456233';
