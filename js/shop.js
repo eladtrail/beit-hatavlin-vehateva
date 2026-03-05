@@ -55,50 +55,43 @@ const DEMO_PRODUCTS = [
    ──────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', init);
 
-async function init() {
+function init() {
   cart = loadCart();
   renderCategoryFilters();
   updateCartBadge();
   bindCartEvents();
   bindCheckoutEvents();
   bindSearch();
-  await loadProducts();
+
+  // הצג דמו מיד — תמיד נראה משהו
+  allProducts = DEMO_PRODUCTS.filter(p => p.active);
+  filteredProducts = [...allProducts];
+  renderProducts(filteredProducts);
+
+  // נסה לטעון מ-Sheets ברקע
+  loadFromSheet();
+}
+
+async function loadFromSheet() {
+  if (!SHEET_CSV_URL) return;
+  try {
+    const resp = await fetch(SHEET_CSV_URL);
+    if (!resp.ok) return;
+    const text = await resp.text();
+    if (text.trim().startsWith('<')) return; // קיבלנו HTML — לא CSV
+    const parsed = parseCSV(text);
+    const active = parsed.filter(p => p.active);
+    if (!active.length) return; // אין מוצרים ב-Sheet — נשאר עם דמו
+    allProducts = active;
+    applyFilters(); // רענן תצוגה עם נתוני Sheet
+  } catch (err) {
+    console.warn('⚠️ Sheet load failed:', err.message, '— keeping demo products');
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────
    Data — fetch & parse
    ──────────────────────────────────────────────────────────── */
-async function loadProducts() {
-  showGridLoading();
-  try {
-    if (SHEET_CSV_URL) {
-      const resp = await fetch(SHEET_CSV_URL);
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      const text = await resp.text();
-
-      // אם קיבלנו HTML במקום CSV (הפניה של Google) — עבור לדמו
-      if (text.trim().startsWith('<')) throw new Error('Got HTML instead of CSV — sheet not published to web');
-
-      const parsed = parseCSV(text);
-      // אם לא נוחל שום מוצר — עבור לדמו
-      if (!parsed.length) throw new Error('CSV parsed 0 products');
-
-      allProducts = parsed;
-    } else {
-      allProducts = DEMO_PRODUCTS;
-    }
-  } catch (err) {
-    console.warn('⚠️ Google Sheets:', err.message, '— מציג מוצרי דמו');
-    allProducts = DEMO_PRODUCTS;
-  }
-
-  // סנן רק מוצרים פעילים
-  allProducts = allProducts.filter(p => p.active);
-  // גיבוי נוסף — אם אחרי סינון נשארנו ריקים, הצג דמו
-  if (!allProducts.length) allProducts = DEMO_PRODUCTS.filter(p => p.active);
-  filteredProducts = [...allProducts];
-  renderProducts(filteredProducts);
-}
 
 function parseCSV(text) {
   // נרמול שורות — הסרת \r\n (Windows) ו-BOM
