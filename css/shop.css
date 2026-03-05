@@ -318,9 +318,16 @@
   cursor: pointer;
   transition: all var(--t-fast);
 }
-.btn-add-cart:hover:not(:disabled) { background: var(--brown-700); transform: scale(1.05); }
-.btn-add-cart:disabled             { background: var(--cream-300); color: var(--text-muted); cursor: not-allowed; }
-.btn-add-cart.btn-added            { background: var(--green-600); }
+.btn-add-cart:hover:not(:disabled):not(.btn-in-cart) { background: var(--brown-700); transform: scale(1.05); }
+.btn-add-cart:disabled { background: var(--cream-300); color: var(--text-muted); cursor: not-allowed; }
+
+/* מוצר שכבר בסל — כחול-ירוק, מציג כמות */
+.btn-add-cart.btn-in-cart {
+  background: var(--green-800);
+  font-size: .7rem;
+  letter-spacing: .01em;
+}
+.btn-add-cart.btn-in-cart:hover { background: var(--green-600); transform: scale(1.03); }
 
 /* Desktop card refinements */
 @media (min-width: 600px) {

@@ -168,17 +168,11 @@ function renderProducts(products) {
 
   grid.innerHTML = products.map(productCardHTML).join('');
 
+  // עדכן מצב כפתורים לפי מה שכבר בסל
+  updateProductButtons();
+
   grid.querySelectorAll('.btn-add-cart').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.dataset.id;
-      addToCart(id);
-      btn.classList.add('btn-added');
-      btn.textContent = '✓ נוסף!';
-      setTimeout(() => {
-        btn.classList.remove('btn-added');
-        btn.textContent = '+ הוסף לסל';
-      }, 1500);
-    });
+    btn.addEventListener('click', () => addToCart(btn.dataset.id));
   });
 }
 
@@ -259,14 +253,16 @@ function addToCart(productId) {
   }
   saveCart();
   updateCartBadge();
+  updateProductButtons();
   renderCartSidebar();
-  openCart();
+  // לא פותחים את הסל — הלקוח יפתח בעצמו
 }
 
 function removeFromCart(productId) {
   cart = cart.filter(i => i.id !== productId);
   saveCart();
   updateCartBadge();
+  updateProductButtons();
   renderCartSidebar();
 }
 
@@ -277,6 +273,7 @@ function updateQty(productId, delta) {
   if (item.qty === 0) cart = cart.filter(i => i.id !== productId);
   saveCart();
   updateCartBadge();
+  updateProductButtons();
   renderCartSidebar();
 }
 
@@ -300,6 +297,21 @@ function updateCartBadge() {
   const count = cartCount();
   badge.textContent = count;
   badge.style.display = count > 0 ? 'flex' : 'none';
+}
+
+/* עדכן כפתורי "הוסף לסל" לפי מצב העגלה הנוכחי */
+function updateProductButtons() {
+  document.querySelectorAll('.btn-add-cart').forEach(btn => {
+    const id   = btn.dataset.id;
+    const item = cart.find(i => i.id === id);
+    if (item) {
+      btn.classList.add('btn-in-cart');
+      btn.textContent = `בסל ×${item.qty}`;
+    } else {
+      btn.classList.remove('btn-in-cart');
+      btn.textContent = '+ הוסף';
+    }
+  });
 }
 
 function openCart() {
