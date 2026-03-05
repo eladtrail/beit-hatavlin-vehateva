@@ -101,7 +101,8 @@ async function loadProducts() {
 }
 
 function parseCSV(text) {
-  const rows = text.trim().split('\n');
+  // נרמול שורות — הסרת \r\n (Windows) ו-BOM
+  const rows = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/^\uFEFF/, '').trim().split('\n');
   if (rows.length < 2) return [];
   const products = [];
   for (let i = 1; i < rows.length; i++) {
