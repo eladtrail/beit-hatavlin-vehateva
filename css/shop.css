@@ -698,7 +698,7 @@
 
 /* ── Responsive Filter Bar ─────────────────────────────────── */
 @media (max-width: 768px) {
-  .filter-bar-inner { flex-direction: column; align-items: stretch; }
+  .filter-bar-inner { flex-direction: column; align-items: stretch; gap: 10px; }
   .search-wrap { min-width: 0; }
   .cat-filters {
     overflow-x: auto;
@@ -715,4 +715,60 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* ── Mobile — כל תיקוני המובייל ────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* Hero קטן יותר */
+  .shop-hero { padding: 36px 0 26px; }
+  .shop-hero-label { font-size: .75rem; padding: 4px 14px; margin-bottom: 10px; }
+  .shop-hero h1 { font-size: 1.55rem; margin-bottom: 8px; }
+  .shop-hero p { font-size: .88rem; }
+
+  /* Filter bar קומפקטי */
+  .filter-bar { padding: 10px 0; }
+  .filter-bar-inner { gap: 8px; }
+  #searchInput { padding: 9px 38px 9px 14px; font-size: .9rem; }
+  .cat-btn { padding: 6px 14px; font-size: .82rem; }
+
+  /* כפתור עגלה — אייקון בלבד */
+  .cart-text { display: none; }
+  #cartToggle { padding: 7px 10px; font-size: .85rem; }
+
+  /* גריד — עמודה אחת בטלפונים קטנים */
+  .shop-section { padding: 20px 0 50px; }
+  .shop-section-header { margin-bottom: 14px; }
+
+  /* כרטיסים — שיפורי מגע */
+  .pcs-icon-area { height: 76px; }
+  .pcs-icon { font-size: 2.2rem; }
+  .pcs-body { padding: 10px 12px 12px; }
+  .pcs-name { font-size: .88rem; }
+  .pcs-desc { font-size: .75rem; -webkit-line-clamp: 2; }
+  .pcs-price { font-size: 1rem; }
+  .btn-add-cart { padding: 5px 10px; font-size: .74rem; }
+
+  /* סל — רוחב מלא */
+  #cartSidebar { width: 100vw; }
+  .cart-header { padding: 16px 18px; }
+
+  /* מודל checkout — מסך מלא */
+  #checkoutModal {
+    width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    top: 0;
+    left: 0;
+    transform: none !important;
+    border-radius: 0;
+  }
+  #checkoutModal.modal-open { transform: none !important; }
+  .modal-header { padding: 16px 18px; }
+  .modal-body { padding: 18px; }
+}
+
+@media (max-width: 360px) {
+  #productsGrid { grid-template-columns: 1fr; }
+  .pcs-icon-area { height: 70px; }
 }

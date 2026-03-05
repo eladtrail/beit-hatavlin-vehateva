@@ -153,6 +153,14 @@ h1, h2, h3, h4 {
 }
 .btn-whatsapp-outline:hover { background: #25D366; color: var(--white); }
 
+.btn-shop {
+  background: linear-gradient(135deg, var(--gold), var(--amber));
+  color: var(--brown-900);
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(212,175,55,.4);
+}
+.btn-shop:hover { box-shadow: 0 14px 36px rgba(212,175,55,.55); filter: brightness(1.06); }
+
 .btn-phone {
   background: rgba(255,255,255,.1);
   color: var(--white);
