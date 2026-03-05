@@ -9,7 +9,8 @@
       "Bash(cmd.exe:*)",
       "Bash(powershell.exe:*)",
       "WebFetch(domain:res.cloudinary.com)",
-      "WebFetch(domain:beit-hatavlin-vehateva.vercel.app)"
+      "WebFetch(domain:beit-hatavlin-vehateva.vercel.app)",
+      "Bash(curl:*)"
     ]
   }
 }
