@@ -3,7 +3,7 @@
 **Project:** בית התבלין והטבע — שיפור אתר
 **Status:** In Progress
 **Current Phase:** 1
-**Current Plan:** 01-03 (complete) — next: 01-04
+**Current Plan:** 01-04 (complete) — Phase 1 complete
 **Last Updated:** 2026-03-11
 
 ## Project Reference
@@ -16,7 +16,7 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 
 | Phase | Name | Status | Requirements |
 |-------|------|--------|--------------|
-| 1 | Foundations — תשתית CSS/JS | ○ Pending | FOUND-01→07 |
+| 1 | Foundations — תשתית CSS/JS | ✓ Complete | FOUND-01→07 |
 | 2 | P0 Bugs — באגים קריטיים | ○ Pending | BUG-01→03 |
 | 3 | Table Stakes UX — חוויית משתמש שלמה | ○ Pending | UX-01→06 |
 | 4 | WhatsApp Checkout — שיפורי תהליך הזמנה | ○ Pending | WA-01→06 |
@@ -46,6 +46,8 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 | 2026-03-11 | fetchpriority=high on hero preload | Hero image is LCP element on mobile — outranks other preloads for faster LCP |
 | 2026-03-11 | clearTimeout in both try and catch | Prevents timer leak on any exit path including early returns in loadFromSheet |
 | 2026-03-11 | Frank Ruhl Libre 400 and Heebo 300 removed | Confirmed unused in CSS — saves 2 HTTP requests per page load |
+| 2026-03-11 | @layer overrides for .nav-cta and responsive rules | Layer order beats specificity — overrides layer wins components, so !important is never needed |
+| 2026-03-11 | shop.css inherits layer order from style.css | Only first @layer declaration in cascade applies; style.css loads first so no re-declaration in shop.css |
 
 ## Execution Log
 
@@ -54,7 +56,8 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 | 01-01 | WhatsApp Design Token | 5min | 2/2 | 1 | Complete |
 | 01-02 | GPU Animations + Reduced-Motion Guard | 8min | 4/4 | 2 | Complete |
 | 01-03 | LCP Preload, Font Weight Trim, CSV Timeout | 5min | 4/4 | 3 | Complete |
+| 01-04 | @layer Architecture + Eliminate !important | 4min | 9/9 | 2 | Complete |
 
 ---
 *State initialized: 2026-03-11*
-*Last session: 2026-03-11T12:42:00Z — Completed 01-03-PLAN.md*
+*Last session: 2026-03-11T12:21:16Z — Completed 01-04-PLAN.md (Phase 1 complete)*
