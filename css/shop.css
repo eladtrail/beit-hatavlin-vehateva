@@ -778,3 +778,8 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+/* ── Reduced Motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .shop-spinner { animation: none; border-top-color: var(--brown-500); }
+}
