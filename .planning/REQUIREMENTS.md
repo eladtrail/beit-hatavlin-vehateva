@@ -83,11 +83,34 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 → FOUND-07 | Phase 1 | Pending |
-| BUG-01 → BUG-03 | Phase 2 | Pending |
-| UX-01 → UX-06 | Phase 3 | Pending |
-| WA-01 → WA-06 | Phase 4 | Pending |
-| POL-01 → POL-06 | Phase 5 | Pending |
+| FOUND-01 | Phase 1 — Foundations | Pending |
+| FOUND-02 | Phase 1 — Foundations | Pending |
+| FOUND-03 | Phase 1 — Foundations | Pending |
+| FOUND-04 | Phase 1 — Foundations | Pending |
+| FOUND-05 | Phase 1 — Foundations | Pending |
+| FOUND-06 | Phase 1 — Foundations | Pending |
+| FOUND-07 | Phase 1 — Foundations | Pending |
+| BUG-01 | Phase 2 — P0 Bugs | Pending |
+| BUG-02 | Phase 2 — P0 Bugs | Pending |
+| BUG-03 | Phase 2 — P0 Bugs | Pending |
+| UX-01 | Phase 3 — Table Stakes UX | Pending |
+| UX-02 | Phase 3 — Table Stakes UX | Pending |
+| UX-03 | Phase 3 — Table Stakes UX | Pending |
+| UX-04 | Phase 3 — Table Stakes UX | Pending |
+| UX-05 | Phase 3 — Table Stakes UX | Pending |
+| UX-06 | Phase 3 — Table Stakes UX | Pending |
+| WA-01 | Phase 4 — WhatsApp Checkout | Pending |
+| WA-02 | Phase 4 — WhatsApp Checkout | Pending |
+| WA-03 | Phase 4 — WhatsApp Checkout | Pending |
+| WA-04 | Phase 4 — WhatsApp Checkout | Pending |
+| WA-05 | Phase 4 — WhatsApp Checkout | Pending |
+| WA-06 | Phase 4 — WhatsApp Checkout | Pending |
+| POL-01 | Phase 5 — Polish | Pending |
+| POL-02 | Phase 5 — Polish | Pending |
+| POL-03 | Phase 5 — Polish | Pending |
+| POL-04 | Phase 5 — Polish | Pending |
+| POL-05 | Phase 5 — Polish | Pending |
+| POL-06 | Phase 5 — Polish | Pending |
 
 **Coverage:**
 - v1 requirements: 28 total
@@ -96,4 +119,4 @@
 
 ---
 *Requirements defined: 2026-03-11*
-*Last updated: 2026-03-11 after initial definition*
+*Last updated: 2026-03-11 after roadmap creation*
