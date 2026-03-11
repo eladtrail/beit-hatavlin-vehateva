@@ -12,6 +12,8 @@
 
 **Requirements:** FOUND-01, FOUND-02, FOUND-03, FOUND-04, FOUND-05, FOUND-06, FOUND-07
 
+**Progress:** 2/4 plans complete (01-01 WhatsApp tokens, 01-02 GPU animations + reduced-motion)
+
 **Success Criteria:**
 1. אין `!important` חדש בשני קבצי CSS — ספציפיות מנוהלת דרך `@layer` בלבד.
 2. צבע `#25D366` (WhatsApp) מופיע בדיוק פעם אחת בקוד — בהגדרת הטוקן `--whatsapp` ב-`:root`.
