@@ -1192,3 +1192,23 @@ h1, h2, h3, h4 {
   .stat { text-align: right; display: flex; gap: 12px; align-items: center; }
   .stat-number { font-size: 32px; }
 }
+
+/* ── Reduced Motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  /* Stop all looping @keyframes */
+  .hero-bg::after                    { animation: none; }
+  .particle                          { animation: none; }
+  .scroll-dot                        { animation: none; }
+  .ac-1, .ac-2, .ac-3, .ac-4        { animation: none; }
+  .nature-label                      { animation: none; }
+  .wa-pulse                          { animation: none; }
+
+  /* Make reveal elements immediately visible — no transition */
+  .reveal,
+  .reveal-right,
+  .reveal-left {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
