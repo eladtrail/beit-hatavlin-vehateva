@@ -74,8 +74,11 @@ function init() {
 
 async function loadFromSheet() {
   if (!SHEET_CSV_URL) return;
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 5000);
   try {
-    const resp = await fetch(SHEET_CSV_URL);
+    const resp = await fetch(SHEET_CSV_URL, { signal: controller.signal });
+    clearTimeout(timeoutId);
     if (!resp.ok) return;
     const text = await resp.text();
     if (text.trim().startsWith('<')) return; // קיבלנו HTML — לא CSV
@@ -85,6 +88,7 @@ async function loadFromSheet() {
     allProducts = active;
     applyFilters(); // רענן תצוגה עם נתוני Sheet
   } catch (err) {
+    clearTimeout(timeoutId);
     console.warn('⚠️ Sheet load failed:', err.message, '— keeping demo products');
   }
 }
