@@ -131,29 +131,29 @@ h1, h2, h3, h4 {
 }
 
 .btn-whatsapp {
-  background: #25D366;
+  background: var(--whatsapp);
   color: var(--white);
   box-shadow: 0 8px 24px rgba(37,211,102,.35);
 }
-.btn-whatsapp:hover { background: #20BA5A; box-shadow: 0 14px 36px rgba(37,211,102,.50); }
+.btn-whatsapp:hover { background: var(--whatsapp-dark); box-shadow: 0 14px 36px rgba(37,211,102,.50); }
 
 .btn-whatsapp-lg {
-  background: #25D366;
+  background: var(--whatsapp);
   color: var(--white);
   box-shadow: 0 8px 28px rgba(37,211,102,.4);
   font-size: 16px;
   padding: 15px 32px;
 }
-.btn-whatsapp-lg:hover { background: #20BA5A; box-shadow: 0 16px 40px rgba(37,211,102,.55); }
+.btn-whatsapp-lg:hover { background: var(--whatsapp-dark); box-shadow: 0 16px 40px rgba(37,211,102,.55); }
 
 .btn-whatsapp-outline {
   background: transparent;
-  color: #25D366;
-  border-color: #25D366;
+  color: var(--whatsapp);
+  border-color: var(--whatsapp);
   font-size: 16px;
   padding: 15px 32px;
 }
-.btn-whatsapp-outline:hover { background: #25D366; color: var(--white); }
+.btn-whatsapp-outline:hover { background: var(--whatsapp); color: var(--white); }
 
 .btn-shop {
   background: linear-gradient(135deg, var(--gold), var(--amber));
@@ -1025,7 +1025,7 @@ h1, h2, h3, h4 {
   color: rgba(255,255,255,.65);
   transition: background var(--t-fast), color var(--t-fast);
 }
-.footer-social a:hover { background: #25D366; color: var(--white); border-color: #25D366; }
+.footer-social a:hover { background: var(--whatsapp); color: var(--white); border-color: var(--whatsapp); }
 
 .footer-nav h4, .footer-contact h4 {
   font-family: var(--font-body);
@@ -1070,7 +1070,7 @@ h1, h2, h3, h4 {
   bottom: 28px;
   inset-inline-start: 28px;
   width: 58px; height: 58px;
-  background: #25D366;
+  background: var(--whatsapp);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1087,7 +1087,7 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: #25D366;
+  background: var(--whatsapp);
   animation: wa-ring 2.5s ease-out infinite;
   z-index: -1;
 }
