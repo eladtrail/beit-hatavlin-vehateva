@@ -12,7 +12,7 @@
 
 **Requirements:** FOUND-01, FOUND-02, FOUND-03, FOUND-04, FOUND-05, FOUND-06, FOUND-07
 
-**Progress:** 2/4 plans complete (01-01 WhatsApp tokens, 01-02 GPU animations + reduced-motion)
+**Progress:** 3/4 plans complete (01-01 WhatsApp tokens, 01-02 GPU animations + reduced-motion, 01-03 LCP preload + font trim + CSV timeout)
 
 **Success Criteria:**
 1. אין `!important` חדש בשני קבצי CSS — ספציפיות מנוהלת דרך `@layer` בלבד.

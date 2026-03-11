@@ -3,7 +3,7 @@
 **Project:** בית התבלין והטבע — שיפור אתר
 **Status:** In Progress
 **Current Phase:** 1
-**Current Plan:** 01-02 (complete) — next: 01-03
+**Current Plan:** 01-03 (complete) — next: 01-04
 **Last Updated:** 2026-03-11
 
 ## Project Reference
@@ -43,6 +43,9 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 | 2026-03-11 | CSS tokens for WhatsApp brand colors | Single source of truth in :root — token definitions hold hex, all usage sites use var() |
 | 2026-03-11 | translateX(100%) for cart hide state | Hides sidebar off physical right edge without affecting layout, consistent with RTL right:0 anchor |
 | 2026-03-11 | Append reduced-motion at file end | Guarantees cascade win without specificity hacks; easy to audit |
+| 2026-03-11 | fetchpriority=high on hero preload | Hero image is LCP element on mobile — outranks other preloads for faster LCP |
+| 2026-03-11 | clearTimeout in both try and catch | Prevents timer leak on any exit path including early returns in loadFromSheet |
+| 2026-03-11 | Frank Ruhl Libre 400 and Heebo 300 removed | Confirmed unused in CSS — saves 2 HTTP requests per page load |
 
 ## Execution Log
 
@@ -50,7 +53,8 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 |------|---------|----------|-------|-------|--------|
 | 01-01 | WhatsApp Design Token | 5min | 2/2 | 1 | Complete |
 | 01-02 | GPU Animations + Reduced-Motion Guard | 8min | 4/4 | 2 | Complete |
+| 01-03 | LCP Preload, Font Weight Trim, CSV Timeout | 5min | 4/4 | 3 | Complete |
 
 ---
 *State initialized: 2026-03-11*
-*Last session: 2026-03-11T12:19:00Z — Completed 01-02-PLAN.md*
+*Last session: 2026-03-11T12:42:00Z — Completed 01-03-PLAN.md*
