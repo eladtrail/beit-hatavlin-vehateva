@@ -536,8 +536,8 @@ h1, h2, h3, h4 {
   animation: scroll-bounce 1.6s ease-in-out infinite;
 }
 @keyframes scroll-bounce {
-  0%   { opacity: 1; top: 5px; }
-  100% { opacity: 0; top: 20px; }
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(15px); }
 }
 
 /* ── About ──────────────────────────────────────────────────── */
