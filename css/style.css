@@ -34,6 +34,8 @@ button { cursor: pointer; }
   --white:     #FFFFFF;
   --dark-bg:   #1C1208;
   --dark-bg2:  #251808;
+  --whatsapp:      #25D366;
+  --whatsapp-dark: #20BA5A;
 
   /* Semantic */
   --text-dark:   var(--brown-900);
