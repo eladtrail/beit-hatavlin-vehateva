@@ -1,9 +1,24 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+current_phase: 2
+current_plan: Not started
+status: planning
+last_updated: "2026-03-11T12:26:17.753Z"
+progress:
+  total_phases: 5
+  completed_phases: 1
+  total_plans: 4
+  completed_plans: 4
+---
+
 # Project State
 
 **Project:** בית התבלין והטבע — שיפור אתר
-**Status:** In Progress
-**Current Phase:** 1
-**Current Plan:** 01-04 (complete) — Phase 1 complete
+**Status:** Ready to plan
+**Current Phase:** 2
+**Current Plan:** Not started
 **Last Updated:** 2026-03-11
 
 ## Project Reference
