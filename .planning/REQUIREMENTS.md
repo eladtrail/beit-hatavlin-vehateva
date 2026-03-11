@@ -10,7 +10,7 @@
 ### Foundations — תשתית CSS/JS
 
 - [ ] **FOUND-01**: CSS @layer מוגדר לניהול ספציפיות בין style.css ו-shop.css ללא !important
-- [ ] **FOUND-02**: טוקן `--whatsapp: #25D366` מוגדר ב-:root ומשמש בכל 4 המקומות הקיימים
+- [x] **FOUND-02**: טוקן `--whatsapp: #25D366` מוגדר ב-:root ומשמש בכל 4 המקומות הקיימים
 - [ ] **FOUND-03**: אנימציית פתיחת סל הקניות משתמשת ב-transform:translateX (GPU composited) במקום right:-100%
 - [ ] **FOUND-04**: כל @keyframes בשני קבצי CSS מוגנים עם prefers-reduced-motion
 - [ ] **FOUND-05**: `<link rel="preload" fetchpriority="high">` לתמונת hero ב-`<head>` של index.html
@@ -84,7 +84,7 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 — Foundations | Pending |
-| FOUND-02 | Phase 1 — Foundations | Pending |
+| FOUND-02 | Phase 1 — Foundations | Complete |
 | FOUND-03 | Phase 1 — Foundations | Pending |
 | FOUND-04 | Phase 1 — Foundations | Pending |
 | FOUND-05 | Phase 1 — Foundations | Pending |
