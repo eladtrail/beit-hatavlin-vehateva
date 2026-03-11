@@ -3,7 +3,9 @@
    MOBILE-FIRST: base styles target ~320px screens.
    Scale up with min-width breakpoints.
    ============================================================ */
+/* shop.css uses layers declared in style.css — no @layer declaration needed here */
 
+@layer components {
 
 /* ── 1. Page shell ──────────────────────────────────────────── */
 .shop-page { min-height: 100vh; }
@@ -778,6 +780,8 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+} /* end @layer components */
 
 /* ── Reduced Motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
