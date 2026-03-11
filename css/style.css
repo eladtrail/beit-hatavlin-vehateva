@@ -621,7 +621,7 @@
   transition: transform var(--t-slow), box-shadow var(--t-slow);
 }
 .about-card-float:hover {
-  transform: translateY(-5px) !important;
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 .ac-icon { font-size: 30px; flex-shrink: 0; }
@@ -941,7 +941,7 @@
 .hours-row--highlight { background: rgba(196,133,42,.08); }
 .hours-row--highlight .hours-val { color: var(--brown-300); }
 .hours-val { font-weight: 600; color: var(--text-dark); text-align: left; direction: ltr; }
-.hours-closed { color: #C0392B !important; }
+.hours-closed { color: #C0392B; }
 
 .map-wrap {
   border-radius: var(--r-lg);
