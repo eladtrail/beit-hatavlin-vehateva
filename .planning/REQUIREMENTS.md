@@ -11,8 +11,8 @@
 
 - [ ] **FOUND-01**: CSS @layer מוגדר לניהול ספציפיות בין style.css ו-shop.css ללא !important
 - [x] **FOUND-02**: טוקן `--whatsapp: #25D366` מוגדר ב-:root ומשמש בכל 4 המקומות הקיימים
-- [ ] **FOUND-03**: אנימציית פתיחת סל הקניות משתמשת ב-transform:translateX (GPU composited) במקום right:-100%
-- [ ] **FOUND-04**: כל @keyframes בשני קבצי CSS מוגנים עם prefers-reduced-motion
+- [x] **FOUND-03**: אנימציית פתיחת סל הקניות משתמשת ב-transform:translateX (GPU composited) במקום right:-100%
+- [x] **FOUND-04**: כל @keyframes בשני קבצי CSS מוגנים עם prefers-reduced-motion
 - [ ] **FOUND-05**: `<link rel="preload" fetchpriority="high">` לתמונת hero ב-`<head>` של index.html
 - [ ] **FOUND-06**: הסרת משקלי פונטים שאינם בשימוש (Frank Ruhl Libre 400, Heebo 300) מ-Google Fonts
 - [ ] **FOUND-07**: timeout של 5 שניות על קריאת CSV מ-Google Sheets
@@ -85,8 +85,8 @@
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 — Foundations | Pending |
 | FOUND-02 | Phase 1 — Foundations | Complete |
-| FOUND-03 | Phase 1 — Foundations | Pending |
-| FOUND-04 | Phase 1 — Foundations | Pending |
+| FOUND-03 | Phase 1 — Foundations | Complete |
+| FOUND-04 | Phase 1 — Foundations | Complete |
 | FOUND-05 | Phase 1 — Foundations | Pending |
 | FOUND-06 | Phase 1 — Foundations | Pending |
 | FOUND-07 | Phase 1 — Foundations | Pending |
