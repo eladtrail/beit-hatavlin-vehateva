@@ -1,3 +1,5 @@
+@layer reset, tokens, base, layout, components, utilities, overrides;
+
 /* ============================================================
    בית התבלין והטבע — Master Stylesheet
    Design: Warm earthy tones, RTL Hebrew, premium feel
