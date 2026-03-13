@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="פשפשים — כל המוצרים. מבצעי Amazon, AliExpress ויד שנייה.">
+  <meta name="theme-color" content="#7C3AED">
+
+  <title>פשפשים — החנות</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%237C3AED'/><text y='.9em' font-size='75' x='12' font-family='Rubik,sans-serif' font-weight='900' fill='white'>פ</text></svg>">
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="navbar" role="navigation" aria-label="ניווט ראשי">
+  <div class="container">
+    <a class="navbar-logo" href="/" aria-label="פשפשים — דף הבית">
+      <div class="logo-icon" aria-hidden="true">פ</div>
+      <span>פשפשים</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="/" data-i18n="nav_home">בית</a></li>
+      <li><a href="/shop" class="active" data-i18n="nav_shop">חנות</a></li>
+      <li><a href="/shop#affiliate" data-i18n="nav_deals">מבצעים</a></li>
+      <li><a href="/shop#secondhand" data-i18n="nav_secondhand">יד שנייה</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="lang-switcher" role="group" aria-label="בחירת שפה">
+        <button class="lang-btn" data-lang="he" aria-label="עברית">עב</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="ru" aria-label="Русский">РУ</button>
+      </div>
+      <a href="https://wa.me/972547921821" class="btn btn-accent" target="_blank" rel="noopener"
+         data-i18n="nav_cta">WhatsApp</a>
+      <button class="hamburger" aria-label="פתח תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay" aria-hidden="true"></div>
+
+<!-- ── Shop Hero ── -->
+<header class="shop-hero">
+  <div class="container">
+    <h1 class="shop-hero-title" data-i18n="shop_hero_title">כל המוצרים</h1>
+    <div class="search-wrap" role="search">
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input
+        id="searchInput"
+        type="search"
+        class="search-input"
+        placeholder="חיפוש מוצרים..."
+        data-i18n="shop_search"
+        aria-label="חיפוש מוצרים"
+        autocomplete="off"
+      >
+    </div>
+  </div>
+</header>
+
+<!-- ── Controls Bar ── -->
+<div class="controls-bar" role="region" aria-label="סינון ומיון">
+  <div class="container">
+    <div class="controls-inner">
+
+      <!-- Type filters -->
+      <div class="type-filters" role="group" aria-label="סינון לפי סוג">
+        <button class="filter-btn active" data-filter-type="all" data-i18n="filter_all">הכל</button>
+        <button class="filter-btn" data-filter-type="affiliate" data-i18n="filter_affiliate">🔗 מבצעים</button>
+        <button class="filter-btn" data-filter-type="secondhand" data-i18n="filter_secondhand">♻️ יד שנייה</button>
+      </div>
+
+      <!-- Category pills -->
+      <div class="cat-filters" role="group" aria-label="סינון לפי קטגוריה">
+        <button class="cat-btn active" data-filter-cat="all" data-i18n="cat_all">הכל</button>
+        <button class="cat-btn" data-filter-cat="tech" data-i18n="cat_tech">📱 טכנולוגיה</button>
+        <button class="cat-btn" data-filter-cat="fashion" data-i18n="cat_fashion">👗 אופנה</button>
+        <button class="cat-btn" data-filter-cat="home" data-i18n="cat_home">🏠 בית</button>
+        <button class="cat-btn" data-filter-cat="sport" data-i18n="cat_sport">🏋️ ספורט</button>
+        <button class="cat-btn" data-filter-cat="books" data-i18n="cat_books">📚 ספרים</button>
+        <button class="cat-btn" data-filter-cat="kids" data-i18n="cat_kids">🧸 ילדים</button>
+        <button class="cat-btn" data-filter-cat="gaming" data-i18n="cat_gaming">🎮 גיימינג</button>
+        <button class="cat-btn" data-filter-cat="tools" data-i18n="cat_tools">🔧 כלים</button>
+        <button class="cat-btn" data-filter-cat="health" data-i18n="cat_health">🌿 בריאות</button>
+        <button class="cat-btn" data-filter-cat="other" data-i18n="cat_other">✨ אחר</button>
+      </div>
+
+      <!-- Sort + Count -->
+      <div class="sort-row">
+        <p class="product-count" aria-live="polite">
+          <strong id="productCount">0</strong>
+          <span data-i18n="stat_products"> מוצרים</span>
+        </p>
+        <div class="sort-select-wrap">
+          <label for="sortSelect" data-i18n="sort_label">מיון:</label>
+          <select id="sortSelect" class="sort-select" aria-label="מיון מוצרים">
+            <option value="newest" data-i18n="sort_newest">חדש ביותר</option>
+            <option value="price_asc" data-i18n="sort_price_asc">מחיר: נמוך לגבוה</option>
+            <option value="price_desc" data-i18n="sort_price_desc">מחיר: גבוה לנמוך</option>
+            <option value="discount" data-i18n="sort_discount">הנחה הגבוהה ביותר</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── Products Grid ── -->
+<main class="shop-products">
+  <div class="container">
+
+    <!-- Empty state -->
+    <div id="emptyState" class="empty-state hidden" role="alert" aria-live="polite">
+      <span class="empty-icon" aria-hidden="true">🔍</span>
+      <h3 data-i18n="no_results">לא נמצאו מוצרים</h3>
+      <p data-i18n="no_results_sub">נסה לשנות את הפילטרים או חפש משהו אחר</p>
+    </div>
+
+    <!-- Products -->
+    <div id="productsGrid" class="products-grid stagger-children" role="list" aria-label="רשימת מוצרים">
+      <!-- Loading skeleton -->
+      <div style="height:360px;background:var(--border);border-radius:var(--radius-xl);animation:pulse 1.5s ease-in-out infinite;"></div>
+      <div style="height:360px;background:var(--border);border-radius:var(--radius-xl);animation:pulse 1.5s ease-in-out infinite;animation-delay:.1s;"></div>
+      <div style="height:360px;background:var(--border);border-radius:var(--radius-xl);animation:pulse 1.5s ease-in-out infinite;animation-delay:.2s;"></div>
+      <div style="height:360px;background:var(--border);border-radius:var(--radius-xl);animation:pulse 1.5s ease-in-out infinite;animation-delay:.3s;"></div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="navbar-logo">
+          <div class="logo-icon" aria-hidden="true">פ</div>
+          <span>פשפשים</span>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">
+          מציאות אמיתיות מ-Amazon, AliExpress ועוד — ומוצרי יד שנייה מכל הלב.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_links">קישורים</h3>
+        <ul class="footer-links">
+          <li><a href="/" data-i18n="nav_home">בית</a></li>
+          <li><a href="/shop" data-i18n="nav_shop">חנות</a></li>
+          <li><a href="/shop?type=affiliate" data-i18n="nav_deals">מבצעים</a></li>
+          <li><a href="/shop?type=secondhand" data-i18n="nav_secondhand">יד שנייה</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title" data-i18n="footer_contact_title">צור קשר</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="https://wa.me/972547921821" target="_blank" rel="noopener" dir="ltr">
+              WhatsApp: 054-792-1821
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer_rights">© 2025 פשפשים. כל הזכויות שמורות.</p>
+      <p class="footer-credit">
+        <span data-i18n="footer_credit">נבנה ע"י </span>
+        <a href="https://slavx.site" target="_blank" rel="noopener">SLAVX.SITE</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/972547921821" class="wa-float" target="_blank" rel="noopener"
+   aria-label="פתח WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.563 4.14 1.538 5.875L0 24l6.304-1.516A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.742-.522-5.292-1.432L2 22l1.448-4.572A9.963 9.963 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+</a>
+
+<style>
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .4; }
+  }
+</style>
+
+<script src="js/i18n.js"></script>
+<script src="js/script.js"></script>
+<script src="js/shop.js"></script>
+
+<!-- Handle URL params for pre-filtering -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type');
+    const cat = params.get('cat');
+
+    if (type) {
+      const btn = document.querySelector(`[data-filter-type="${type}"]`);
+      btn?.click();
+    }
+    if (cat) {
+      const btn = document.querySelector(`[data-filter-cat="${cat}"]`);
+      btn?.click();
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+id,name_he,name_en,name_ru,desc_he,desc_en,desc_ru,price,original_price,image,category,type,platform,link,condition,badge,active
+1,שם מוצר בעברית,Product Name in English,Название на русском,תיאור קצר בעברית,Short description in English,Краткое описание на русском,199,299,https://link-to-image.com/img.jpg,tech,affiliate,amazon,https://amazon.com/product-link,,hot,TRUE
+2,יד שנייה לדוגמה,Secondhand Example,Пример б/у,תיאור מצב המוצר בעברית,Product condition description,Описание состояния товара,150,,https://link-to-image.com/img.jpg,tech,secondhand,,,כמו חדש,,TRUE

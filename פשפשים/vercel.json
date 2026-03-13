@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "/shop", "dest": "/shop.html" },
+    {
+      "src": "/(.*\\.(css|js|svg|png|jpg|ico|webp|woff2))",
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "src": "/(.*\\.(html))",
+      "headers": { "Cache-Control": "public, max-age=3600" }
+    }
+  ]
+}
